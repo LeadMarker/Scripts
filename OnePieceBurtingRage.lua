@@ -91,10 +91,12 @@ main:AddToggle({
 
 spawn(function()
     while wait() do 
-        if Settings.HideName then 
-            if game.Players.LocalPlayer.Character.Head:FindFirstChildWhichIsA("BillboardGui") then 
-                game.Players.LocalPlayer.Character.Head:FindFirstChildWhichIsA("BillboardGui"):Destroy()
-            end
+        if Settings.HideName then
+            pcall(function()
+                if game.Players.LocalPlayer.Character.Head:FindFirstChildWhichIsA("BillboardGui") then 
+                    game.Players.LocalPlayer.Character.Head:FindFirstChildWhichIsA("BillboardGui"):Destroy()
+                end
+            end)
         end
     end
 end)
@@ -254,7 +256,7 @@ cred:AddButton({text = "LeadMarker#1219", callback = function()
     setclipboard("LeadMarker#1219")
 end})
 cred:AddButton({text = "Discord", callback = function()
-  setclipboard("discord.gg/8Cj5abGrNv")
+    setclipboard("discord.gg/8Cj5abGrNv")
 end})
 
 -- // Init \\ -- 
