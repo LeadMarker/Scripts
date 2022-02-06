@@ -1,6 +1,6 @@
 -- are the devs watching :eye:f
 
-local Library = loadstring(game:HttpGet("https://leadmarker.xyz/Libs/Uwuware.lua", true))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LeadMarker/Extrass/main/Uwuwarebackup.lua", true))()
 local Window = Library:CreateWindow("LeadMarker - OPBR")
 
 -- // vars \\ -- 
