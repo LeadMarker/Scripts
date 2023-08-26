@@ -308,7 +308,6 @@ do
 
     if not startup_args.ignoreui then
         library.screengui = Instance.new('ScreenGui')
-        syn.protect_gui(library.screengui)
         library.screengui.Parent = game:GetService('CoreGui')
 
         local button = Instance.new('ImageButton')
@@ -3465,7 +3464,7 @@ function library:create_settings_tab(menu)
     end})
 
     settings_main:button({text = 'join discord', callback = function()
-        local res = syn.request({
+        local res = exp_type.request({
             Url = 'http://127.0.0.1:6463/rpc?v=1',
             Method = 'POST',
             Headers = {
